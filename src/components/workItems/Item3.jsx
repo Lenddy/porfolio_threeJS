@@ -29,7 +29,7 @@ const Item3 = () => {
 				<React_logo />
 				<OrbitControls enableZoom={false} autoRotate={true} />
 			</Canvas>
-			<Description>this is a description</Description>
+			{/* <Description>this is a description</Description> */}
 		</>
 	);
 };

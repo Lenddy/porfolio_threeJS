@@ -95,8 +95,8 @@ const Right = styled.div`
 	}
 `;
 const Img = styled.img`
-	width: 800px;
-	height: 600px;
+	width: 600px;
+	height: 500px;
 	object-fit: contain;
 	position: absolute;
 	top: 0;
@@ -119,18 +119,35 @@ const Img = styled.img`
 `;
 
 const Hero = () => {
+	const newTab = (url) => {
+		window.open(url);
+	};
 	return (
 		<Section>
 			<NavBar />
 			<Container>
 				<Left>
-					<Title> Think. Make. Solve.</Title>
+					<Title>The place To Create Your Dream Web Page </Title>
 					<WhatIDo>
-						<Line src="./img/line.png" />
-						<Subtitle>what i do </Subtitle>
+						{/* <Line src="./img/line.png" /> */}
+						<Subtitle>Hello There... </Subtitle>
 					</WhatIDo>
-					<Desc>this is a description </Desc>
-					<Button>Learn more </Button>
+					<Desc>
+						{" "}
+						The Name is Lenddy Morales. I enjoy creating websites
+						and I also Like to make video Games, ones that suit your
+						desires and needs using latest technologies and cleanest
+						design patterns.
+					</Desc>
+					<Button
+						onClick={() =>
+							newTab(
+								"https://docs.google.com/document/d/12vkzj7Zjqu1vzWEcVHD0i0UKJ1PYsvx41-QtacLm0os/edit?usp=share_link"
+							)
+						}
+					>
+						View Resume{" "}
+					</Button>
 				</Left>
 				<Right>
 					<Canvas>

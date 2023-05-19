@@ -5,6 +5,7 @@ import Who from "./components/Who";
 import Contact from "./components/Contact";
 import { styled } from "styled-components";
 // import Test from "./components/Test";
+import NavBar from "./components/NavBar";
 
 //styles for the back ground
 const Container = styled.div`
@@ -24,6 +25,7 @@ const Container = styled.div`
 function App() {
 	return (
 		<Container className="App">
+			{/* <NavBar /> */}
 			<Hero></Hero>
 			<Who></Who>
 			<Works></Works>

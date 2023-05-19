@@ -4,22 +4,19 @@ import {
 	Geographies,
 	Geography,
 	Annotation,
-	ZoomableGroup,
 } from "react-simple-maps";
 
 const Map = () => {
+	const geoUrl =
+		"https://raw.githubusercontent.com/zcreativelabs/react-simple-maps/master/topojson-maps/usa-10m.json";
+
 	return (
 		<ComposableMap
-			projection="geoAzimuthalEqualArea"
-			projectionConfig={{
-				rotate: [-10.0, -52.0, 0],
-				center: [-5, -3],
-				scale: 1600,
-			}}
+			projection="geoAlbersUsa" // Change projection to show the USA map
 			style={{ width: "100%", height: "100%" }}
 		>
 			<Geographies
-				geography="/features.json"
+				geography={geoUrl} // Update the path to the local file
 				fill="#2c065d"
 				stroke="#FFFFFF"
 				strokeWidth={0.5}
@@ -31,7 +28,7 @@ const Map = () => {
 				}
 			</Geographies>
 			<Annotation
-				subject={[2.3522, 48.8566]}
+				subject={[-74.0059, 40.7128]} // Coordinates for New York City
 				dx={-90}
 				dy={-30}
 				connectorProps={{
@@ -46,26 +43,7 @@ const Map = () => {
 					alignmentBaseline="middle"
 					fill="white"
 				>
-					{"Paris"}
-				</text>
-			</Annotation>
-			<Annotation
-				subject={[21.01178, 52.22977]}
-				dx={-90}
-				dy={-30}
-				connectorProps={{
-					stroke: "white",
-					strokeWidth: 2,
-					strokeLinecap: "round",
-				}}
-			>
-				<text
-					x=""
-					textAnchor="end"
-					alignmentBaseline="middle"
-					fill="white"
-				>
-					{"Warsaw"}
+					{"New York"}
 				</text>
 			</Annotation>
 		</ComposableMap>

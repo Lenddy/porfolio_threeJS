@@ -79,29 +79,57 @@ const Button = styled.button`
 `;
 
 const Who = () => {
+	const newTab = (url) => {
+		window.open(url);
+	};
 	return (
 		<Section>
 			<Container>
 				<Left>
 					<Canvas camera={{ fov: 25, position: [5, 5, 5] }}>
 						{/* allows you to orbit around the element and zoom in and out if it is not disable */}
-						<OrbitControls enableZoom={false} autoRotate={true} />
+						<OrbitControls autoRotate={true} />
 						{/* enableZoom={false} */}
 
 						{/* give light equals to every corner of the render    we can also change the intensity*/}
 						<ambientLight intensity={1} />
 						<directionalLight position={[3, 2, 1]} />
 						<CubeObject />
+						{/* allow the colore to be change 
+						 decide if it will change  when the user move the cube around and zoom in and out 
+						 or they will have a box to chose from  */}
 					</Canvas>
 				</Left>
 				<Right>
-					<Title> Think think out the square space</Title>
+					<Title>I am Lenddy Morales </Title>
 					<WhatIDo>
 						<Line src="./img/line.png" />
-						<Subtitle> who i am </Subtitle>
+						<Subtitle> Think out the square space </Subtitle>
 					</WhatIDo>
-					<Desc>a creative individual for software development</Desc>
-					<Button> see my work </Button>
+					<Desc>
+						I'm a 19-year-old with a deep passion for software
+						development. I'm always eager to expand my horizons by
+						learning new software and staying ahead of the curve.
+						When I'm not pursuing my software endeavors, I find joy
+						in both creating and playing video games. They allow me
+						to explore my imagination and immerse myself in
+						captivating virtual worlds.
+						<br /> <br /> As a Coding Bootcamp graduate, I
+						understand the challenges of staying up to date in the
+						ever-changing world of software. I have constantly
+						learned new things such as programming languages,
+						frameworks, libraries, and more. I have hands-on
+						experience working both in teams and as an individual.
+						This experience has been transformative, opening up new
+						possibilities for me in the world of technology. With my
+						diverse interests and unquenchable thirst for knowledge,
+						I'm excited to embark on an extraordinary journey of
+						growth and discovery
+					</Desc>
+					<Button onClick={() => newTab("https://github.com/Lenddy")}>
+						{" "}
+						see my work{" "}
+					</Button>
 				</Right>
 			</Container>
 		</Section>

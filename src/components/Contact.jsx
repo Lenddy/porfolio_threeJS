@@ -17,10 +17,22 @@ const Container = styled.div`
 `;
 
 const Left = styled.div`
-	flex: 1;
-	display: flex;
+	/* flex: 1;
+	display: flex; */
 	align-items: center;
 	justify-content: flex-end;
+	@media only screen and (max-width: 768px) {
+		justify-content: center;
+	}
+`;
+
+const Center = styled.div`
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+	text-align: center;
 	@media only screen and (max-width: 768px) {
 		justify-content: center;
 	}
@@ -51,7 +63,7 @@ const TextArea = styled.textarea`
 	background-color: #e8e6e6;
 `;
 const Button = styled.button`
-	background-color: pink;
+	background-color: #da4ea2;
 	color: white;
 	border: none;
 	font-weight: bold;
@@ -61,7 +73,7 @@ const Button = styled.button`
 `;
 
 const Right = styled.div`
-	flex: 1;
+	/* flex: 1; */
 	@media only screen and (max-width: 768px) {
 		display: none;
 	}
@@ -95,7 +107,7 @@ const Contact = () => {
 	return (
 		<Section>
 			<Container>
-				<Left>
+				<Center>
 					<Form onSubmit={handleSubmit} ref={ref}>
 						<Title> Contact me </Title>
 						<Input placeholder="Name" name="name" />
@@ -106,13 +118,17 @@ const Contact = () => {
 							name="message"
 						/>
 						<Button type="submit">Sent</Button>
-						{success &&
-							"your message was sent, I'll contact you as soon as posible "}
+						{success && (
+							<Title>
+								your message was sent, I'll contact you as soon
+								as posible{" "}
+							</Title>
+						)}
 					</Form>
-				</Left>
-				<Right>
+				</Center>
+				{/* <Right>
 					<Map></Map>
-				</Right>
+				</Right> */}
 			</Container>
 		</Section>
 	);

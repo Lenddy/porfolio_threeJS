@@ -5,7 +5,6 @@ import Item1 from "./workItems/Item1";
 import Item2 from "./workItems/Item2";
 import Item3 from "./workItems/Item3";
 
-const data = ["Web Design", "test 2", "test 3", "test 4", "test 5"];
 //???
 const Section = styled.div`
 	height: 100vh;
@@ -53,7 +52,7 @@ const ListItem = styled.li`
 		position: absolute;
 		top: 0;
 		left: 0;
-		color: pink;
+		color: #da4ea2;
 		width: 0px;
 		overflow: hidden;
 		white-space: nowrap;
@@ -81,8 +80,9 @@ const Right = styled.div`
 	flex: 1;
 `;
 
+const data = ["I R Y E", "E C S"];
 const Works = () => {
-	const [work, setWork] = useState("Web Design");
+	const [work, setWork] = useState("logo");
 	return (
 		<Section>
 			<Container>
@@ -100,9 +100,9 @@ const Works = () => {
 					</List>
 				</Left>
 				<Right>
-					{work === "Web Design" ? (
+					{work === "I R Y E" ? (
 						<Item1 />
-					) : work === "test 2" ? (
+					) : work === "E C S" ? (
 						<Item2 />
 					) : (
 						<Item3 />
