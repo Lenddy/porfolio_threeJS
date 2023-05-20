@@ -20,6 +20,8 @@ const Container = styled.div`
 	&::-webkit-scrollbar {
 		display: none; /* Chrome, Safari, and Opera */
 	}
+	@media only screen and (max-width: 768px) {
+	}
 `;
 
 function App() {

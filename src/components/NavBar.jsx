@@ -170,7 +170,7 @@ const NavBar = () => {
 							)
 						}
 					>
-						Resume
+						My Resume
 					</Button>
 				</Icons>
 			</Container>

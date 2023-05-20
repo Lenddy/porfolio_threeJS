@@ -124,6 +124,11 @@ const Contact = () => {
 								as posible{" "}
 							</Title>
 						)}
+						{success == false && (
+							<Title>
+								your message was not sent please try again later
+							</Title>
+						)}
 					</Form>
 				</Center>
 				{/* <Right>

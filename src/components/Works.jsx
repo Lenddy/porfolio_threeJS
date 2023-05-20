@@ -32,6 +32,8 @@ const Left = styled.div`
 	@media only screen and (max-width: 768px) {
 		padding: 20px;
 		justify-content: center;
+		margin-top: 250px;
+		margin-right: 20px;
 	}
 `;
 const List = styled.ul`
