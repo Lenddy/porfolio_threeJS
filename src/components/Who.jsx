@@ -87,17 +87,20 @@ const Who = () => {
 			<Container>
 				<Left>
 					<Canvas camera={{ fov: 25, position: [5, 5, 5] }}>
-						{/* allows you to orbit around the element and zoom in and out if it is not disable */}
-						<OrbitControls autoRotate={true} />
-						{/* enableZoom={false} */}
+						{/* allows you to orbit around the element and zoom in and out if it is not disable this is a comment */}
+						<OrbitControls
+							autoRotate={true}
+							autoRotateSpeed={20}
+							enableZoom={true}
+						/>
 
-						{/* give light equals to every corner of the render    we can also change the intensity*/}
+						{/* give light equals to every corner of the render    we can also change the intensity */}
 						<ambientLight intensity={1} />
 						<directionalLight position={[3, 2, 1]} />
 						<CubeObject />
 						{/* allow the colore to be change 
 						 decide if it will change  when the user move the cube around and zoom in and out 
-						 or they will have a box to chose from  */}
+						 or they will have a box to chose from  this is a comment */}
 					</Canvas>
 				</Left>
 				<Right>

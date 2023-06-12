@@ -123,6 +123,7 @@ const Hero = () => {
 		window.open(url);
 	};
 	return (
+		// go to nav bar
 		<Section>
 			<NavBar />
 			<Container>
@@ -146,16 +147,15 @@ const Hero = () => {
 							)
 						}
 					>
-						View Resume{" "}
+						View Resume
 					</Button>
 				</Left>
 				<Right>
 					<Canvas>
-						{/* allows you to orbit around the element and zoom in and out if it is not disable */}
-						<OrbitControls enableZoom={false} autoRotate={false} />
-						{/* enableZoom={false} */}
+						{/* allows you to orbit around the element and zoom in and out if it is not disable this is a comment */}
+						<OrbitControls autoRotate={true} enableZoom={false} />
 
-						{/* give light equals to every corner of the render    we can also change the intensity*/}
+						{/* give light equals to every corner of the render    we can also change the intensitythis is a comment */}
 						<ambientLight intensity={1} />
 						<directionalLight position={[3, 2, 1]} />
 						<Sphere args={[1, 100, 200]} scale={1.7}>

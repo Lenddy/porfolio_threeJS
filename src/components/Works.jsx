@@ -101,18 +101,18 @@ const Works = () => {
 						))}
 					</List>
 				</Left>
-				<Right>
-					{work === "I R Y E" ? (
-						<Item1 />
-					) : work === "E C S" ? (
-						<Item2 />
-					) : (
-						<Item3 />
-					)}
-				</Right>
+				<Right>the comment info goes here</Right>
 			</Container>
 		</Section>
 	);
 };
 
 export default Works;
+
+// {work === "I R Y E" ? (
+// 	<Item1 />
+// ) : work === "E C S" ? (
+// 	<Item2 />
+// ) : (
+// 	<Item3 />
+// )}

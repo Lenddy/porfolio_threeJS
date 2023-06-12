@@ -48,33 +48,32 @@ const List = styled.ul`
 
 const ListItem = styled.li`
 	cursor: pointer; //so the cursor turns to the pointer when it hovers over the wanted element
-	width: 90px;
-	height: 90px;
+	width: 100px;
+	height: 100px;
 	@media only screen and (max-width: 768px) {
 		/* display: none; */
 		width: 50px;
 		height: 50px;
 	}
 `;
-const rotateBackAndForth = keyframes`
+
+const rotate = keyframes`
   0% {
     transform: rotate(0deg);
   }
-  50% {
-    transform: rotate(180deg);
-  }
   100% {
-    transform: rotate(0deg);
+    transform: rotate(360deg);
   }
 `;
 
 const ListItem2 = styled.li`
-	cursor: pointer; //so the cursor turns to the pointer when it hovers over the wanted element
-	width: 100px;
-	height: 100px;
-	animation: ${rotateBackAndForth} 10s linear infinite;
+	cursor: pointer;
+	width: 140px;
+	height: 140px;
+	transform: translate(-50%, -50%);
+	animation: ${rotate} 8s linear infinite;
+
 	@media only screen and (max-width: 768px) {
-		/* display: none; */
 		width: 50px;
 		height: 50px;
 	}
@@ -128,7 +127,6 @@ const NavBar = () => {
 		<Section>
 			<Container>
 				<Icons>
-					{" "}
 					<List>
 						<ListItem
 							onClick={() =>
@@ -136,12 +134,14 @@ const NavBar = () => {
 							}
 						>
 							<Canvas>
-								<OrbitControls autoRotate={true} />
-								{/* <ambientLight intensity={1} /> */}
-								{/* <directionalLight position={[3, 2, 1]} /> */}
+								<OrbitControls
+									autoRotate={true}
+									autoRotateSpeed={20}
+								/>
+								{/* <ambientLight intensity={1} />
+								<directionalLight position={[3, 2, 1]} /> */}
 								<Stage
-									environment={"forest"}
-									// intensity={0.6}
+								// environment={"forest"}
 								>
 									<LinkedIn_logo />
 								</Stage>
@@ -151,16 +151,18 @@ const NavBar = () => {
 							onClick={() => newTab("https://github.com/Lenddy")}
 						>
 							<Canvas>
-								<OrbitControls autoRotate={true} />
-								{/* <ambientLight intensity={1} />
-								<directionalLight position={[3, 2, 1]} /> */}
-								<Stage environment={"night"} intensity={0.5}>
+								<OrbitControls
+								// autoRotate={true}
+								// autoRotateSpeed={20}
+								/>
+								<ambientLight intensity={0.2} />
+
+								<directionalLight position={[3, 2, 1]} />
+								<Stage>
 									<Github_Logo />
 								</Stage>
 							</Canvas>
 						</ListItem2>
-						{/* <ListItem>Work</ListItem>
-						<ListItem>Contract</ListItem> */}
 					</List>
 					{/* <Icon src="./img/search.png" /> */}
 					<Button
